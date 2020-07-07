@@ -1,6 +1,6 @@
 /*        Algorithms and Problem Solving Patterns     */
 
-// Introduction to Problem Solving
+/*           Introduction to Problem Solving          */
 
 //  Objectives:
 //
@@ -74,7 +74,7 @@
   //       - return result...
 })();
 
-// Step 2 Concrete Examples
+/*             Step 2 Concrete Examples                 */
 
 // Problem Solving:
 //  + Understand the problem
@@ -244,7 +244,7 @@
   // charCount('Your PIN number is 1234!');
 })();
 
-/*           Step 5 Look Back and Refactor             */
+/*             Step 5 Look Back and Refactor            */
 
 //  Problem Solving
 
