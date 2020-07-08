@@ -241,81 +241,131 @@
 // countUniqueValues([-2,-1,-1,0,1]) // 4
 
 (() => {
-  function countUniqueValues(arr) {
-    let i = 0;
+  // function countUniqueValues(arr) {
+  //   let i = 0;
+  //   for (let j = 1; j < arr.length; j++) {
+  //     if (arr[i] !== arr[j]) {
+  //       i++;
+  //       arr[i] = arr[j];
+  //     }
+  //   }
+  //   // arr.length = i + 1;
+  //   // return arr;
+  //   return i + 1;
+  // }
+})();
 
-    for (let j = 1; j < arr.length; j++) {
-      if (arr[i] !== arr[j]) {
-        i++;
-        arr[i] = arr[j];
-      }
-    }
-    // arr.length = i + 1;
-    // return arr;
-    return i + 1;
-  }
+/*                  Sliding Window Pattern                 */
+
+// This pattern involves creating a window which can
+//  either be an array or number from one position
+//  to another.
+
+// Depending on a certain condition, the window either
+//  increases or closes (and a new window is created)
+
+// Very useful for keeping track of a subset of data
+//  in an array/string etc.
+
+(() => {
+  // An Example
+  // Write a function called maxSubarraySum which
+  //  accepts an array of integers and a number
+  //  called n. The function should calculate
+  //  the maximum sum of n consecutive elements in the array
+  // maxSubarraySum([1,2,5,2,8,1,5], 2) // 10
+  // maxSubarraySum([1,2,5,2,8,1,5], 4) // 17
+  // maxSubarraySum([4,2,1,6], 1) // 6
+  // maxSubarraySum([4,2,1,6,2], 4) // 13
+  // maxSubarraySum([], 4) //  null
+  // A naive solution
+  // Time Complexity - O(N^2)
+  // function maxSubarraySum(arr, num) {
+  //   if (num > arr.length) {
+  //     return null;
+  //   }
+  //   let max = -Infinity;
+  //   for (let i = 0; i < arr.length - num + 1; i++) {
+  //     temp = 0;
+  //     for (let j = 0; j < num; j++) {
+  //       temp += arr[i + j];
+  //     }
+  //     if (temp > max) {
+  //       max = temp;
+  //     }
+  //   }
+  //   return max;
+  // }
+  // console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4)); // 17
 })();
 
 (() => {
-  //
+  // // Refactor
+  // // Time Complexity - O(N)
+  // function maxSubarraySum(arr, num) {
+  //   let maxSum = 0;
+  //   let tempSum = 0;
+  //   if (arr.length < num) return null;
+  //   for (let i = 0; i < num; i++) {
+  //     maxSum += arr[i];
+  //   }
+  //   tempSum = maxSum;
+  //   for (let i = num; i < arr.length; i++) {
+  //     tempSum = tempSum - arr[i - num] + arr[i];
+  //     maxSum = Math.max(maxSum, tempSum);
+  //   }
+  //   return maxSum;
+  // }
+  // console.log(maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4)); // 17
+})();
+
+/*               Divide And Conquer Pattern                */
+
+// This pattern involves dividing a data set into
+//  smaller chunks and then repeating a process
+//  with a subset of data.
+
+// This pattern can tremendously decrease time complexity
+
+// An Example
+// Given a sorted array of integers, write
+//  a function called search, that accepts
+//  a value and returns the index where the
+//  value passed to the function is located.
+//  If the value is not found, return -1.
+
+(() => {
+  // // A naive solution
+  // // Linear Search
+  // // Time Complexity O(N)
+  // function search(arr, val) {
+  //   for (let i = 0; i < arr.length; i++) {
+  //     if (arr[i] === val) {
+  //       return i;
+  //     }
+  //   }
+  //   return -1;
+  // }
 })();
 
 (() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
-})();
-
-(() => {
-  //
+  // // Refactor
+  // // Binary Search!
+  // // Time Complexity - Log(N)
+  // function search(array, val) {
+  //   let min = 0;
+  //   let max = array.length - 1;
+  //   while (min <= max) {
+  //     let middle = Math.floor((min + max) / 2);
+  //     let currentElement = array[middle];
+  //     if (array[middle] < val) {
+  //       max = middle + 1;
+  //     } else if (array[middle] > val) {
+  //       max = middle - 1;
+  //     } else {
+  //       return middle;
+  //     }
+  //   }
+  //   return -1;
+  // }
 })();
