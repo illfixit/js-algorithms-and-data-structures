@@ -16,3 +16,13 @@
  * Selection *  O(N^2)  *   O(N^2)  *  O(N^2)  *     O(1)   *
  *   sort    *          *           *          *            *
  ** * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ // Quick Recap
+
+ // + Sorting is fundamental!
+ // + Bubble sort, selection sort, and insertion sort 
+ //    are all roughly equivalent
+ // + All have average time complexities that are 
+ //    quadratic
+ // + We can do better ... but we need more complex
+ //    algorithms!
