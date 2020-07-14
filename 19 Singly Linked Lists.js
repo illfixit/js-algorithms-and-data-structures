@@ -544,17 +544,49 @@
 //    the index and return the node at that
 //    specific index
 
+/*       Singly Linked List Get Solution       */
+
 (() => {
-  function get(index) {
-    if (index < 0 || index >= this.length) {
-      return undefined;
-    }
-    let counter = 0;
-    let current = this.head;
-    while (counter !== index) {
-      currentNode = currentNode.next;
-      counter++;
-    }
-    return current;
-  }
+  // function get(index) {
+  //   if (index < 0 || index >= this.length) {
+  //     return undefined;
+  //   }
+  //   let counter = 0;
+  //   let current = this.head;
+  //   while (counter !== index) {
+  //     currentNode = currentNode.next;
+  //     counter++;
+  //   }
+  //   return current;
+  // }
+})();
+
+/*       Singly Linked List Set Intro       */
+
+//     Set
+//
+//   Changing the value of a node based on it's
+//    position in the Linked List
+
+//     Set pseudocode
+//
+// * This function should accept a value and an
+//    index
+// * Use your get function to find the specific node
+// * If the node is not found, return false
+// * If the node is found, set the valu of that node
+//    to be the value passed to the function and
+//    return true
+
+/*       Singly Linked List Set Solution       */
+
+(() => {
+  // function set(index, value) {
+  //   var foundNode = this.get(index);
+  //   if(foundNode) {
+  //     foundNode.val = val;
+  //     return true;
+  //   }
+  //   return false;
+  // }
 })();
