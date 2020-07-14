@@ -590,3 +590,153 @@
   //   return false;
   // }
 })();
+
+/*       Singly Linked List Insert Intro       */
+
+//     Insert
+//
+//   Adding a node to the Linked List at a specific
+//    position
+
+//     Insert pseudocode
+//
+// * If the index is less than zero or greater than
+// *  the length, return false
+// * If the index is tha same as the length, push a
+//    new node to the end of the list
+// * If the index is 0, unshift a new node to the
+//    start of the list
+// * Otherwise, using the get method, access the node
+//    at the index
+// * Set the next property on that node to be the new
+//    node
+// * Set the next property on the new node to be the
+//    previous next
+// * Increment the length
+// * Return true
+
+/*       Singly Linked List Insert Solution       */
+
+(() => {
+  // function insert(index, val) {
+  //   if (index < 0 || index > this.length) return false;
+  //   if (index === this.length) return !!this.push(val);
+  //   if (index === 0) return !!this.unshift(val);
+  //   var newNode = new Node(val);
+  //   var prev = this.get(index - 1);
+  //   var temp = prev.next;
+  //   prev.next = newNode;
+  //   newNode.next = temp;
+  //   this.length++;
+  //   return true;
+  // }
+})();
+
+/*       Singly Linked List Remove Intro       */
+
+//     Remove
+//
+// Removing a node from the Linked List
+//  at a specific position
+
+//     Remove pseudocode
+//
+// * If the index is less than zero or greater
+//    than the length, return undefined
+// * If the index is the same as the length-1, pop
+// * If the index is 0, shift
+// * Otherwise, using the get method, access the
+//    node at the index-1
+// * Set the next property on that node to be the
+//    next of the next node
+// * Decrement the length
+// * Return the value of the node removed
+
+/*       Singly Linked List Remove Solution       */
+
+(() => {
+  // remove(index) {
+  //   if(index < 0 || index >= this.length ) return undefined;
+  //   if(index === 0) return this.shift();
+  //   if(index === this.length-1) return this.pop();
+  //   var previousNode = this.get(index-1)
+  //   var removed = previousNode.next;
+  //   previousNode.next = removed.next;
+  //   this.length--;
+  //   return removed;
+  // }
+})();
+
+/*       Singly Linked List Reverse Intro       */
+
+//   Reverse
+// Reversing the Linked List in place!
+
+//   Reverse pseudocode
+//
+// * Swap the head and tail
+// * Create a variable called next
+// * Create a variable called prev
+// * Create a variable called node and
+//    initialize it to the head property
+// * Loop through the list
+// * Set next to be the next property on
+//    whatever node is
+// * Set the next property on the node to
+//    be the value of the node variable
+// * Set the node variable to be the value
+//    of the next variable
+
+/*       Singly Linked List Reverse Solution       */
+
+// Helper function (print)
+(() => {
+  // print() {
+  //   var arr = [];
+  //   var current = this.head;
+  //   while (current) {
+  //     arr.push(current.val);
+  //     current = current.next;
+  //   }
+  //   console.log(arr);
+  // }
+})();
+
+(() => {
+  // reverse() {
+  //   var node = this.head;
+  //   this.head = this.tail;
+  //   this.tail = node;
+  //   var next = null;
+  //   var prev = null;
+  //   for(var i = 0; i<this.length; i++) {
+  //     next = node.next;
+  //     node.next = prev;
+  //     prev = node;
+  //     node = next;
+  //   }
+  //   return this;
+  // }
+})();
+
+/*       Singly Linked List BIG O Complexity       */
+
+// Big O of Singly Linked Lists
+//
+// Insertion -> O(1)
+// Removal   -> O(1) or O(n)
+// Searching -> O(N)
+// Access    -> O(N)
+
+// Recap
+//
+// * Singly Linked Lists are an excellent
+//    alternative to arrays when insertion
+//    and deletion at the beginning are
+//    frequently required.
+// * Arrays contain a built in index whereas
+//    Linked Lists do not.
+// * The idea of a list data structure that
+//    consists of nodes is the foundation
+//    for other data structures like Stacks
+//    and Queues
