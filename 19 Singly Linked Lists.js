@@ -514,16 +514,47 @@
 // * Increment the length of the list by 1
 // * Return the linked list
 
-// (() => {
-//   function unshift(val) {
-//     var newNode = new Node(val);
-//     if (!head) {
-//       this.head = newNode;
-//       this.tail = this.head;
-//     }
-//     newNode.next = this.head;
-//     this.head = newNode;
-//     this.length++;
-//     return this;
-//   }
-// })();
+(() => {
+  //   function unshift(val) {
+  //     var newNode = new Node(val);
+  //     if (!head) {
+  //       this.head = newNode;
+  //       this.tail = this.head;
+  //     }
+  //     newNode.next = this.head;
+  //     this.head = newNode;
+  //     this.length++;
+  //     return this;
+  //   }
+})();
+
+/*       Singly Linked List Get Intro       */
+
+//     Get
+//
+// Retrieving a node by it's position in the Linked List
+
+//     Get pseudocode
+//
+// * This function should accept an index
+// * If the index is less than zero or
+//    greater or equal to the length of
+//    the list, return null or undefined
+// * Loop through the list until you reach
+//    the index and return the node at that
+//    specific index
+
+(() => {
+  function get(index) {
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+    let counter = 0;
+    let current = this.head;
+    while (counter !== index) {
+      currentNode = currentNode.next;
+      counter++;
+    }
+    return current;
+  }
+})();
